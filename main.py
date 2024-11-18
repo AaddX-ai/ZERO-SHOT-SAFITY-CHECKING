@@ -13,7 +13,7 @@ session_options = ort.SessionOptions()
 session_options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_ALL
 session_options.enable_profiling = True
 
-ort_session = ort.InferenceSession("clipseg_model.onnx",session_options)
+ort_session = ort.InferenceSession("cq.onnx",session_options)
 processor = CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
 
 def process_image(image, prompt="a large white block area", threshold=0.8):
